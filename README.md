@@ -49,4 +49,4 @@ download psycopg2 here:
 
 
 
-<em>Repeat and repeat is the key</em>
+<p style="float:right"><em>Repeat and repeat is the key</em></p>
