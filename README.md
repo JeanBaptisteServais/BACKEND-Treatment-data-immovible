@@ -17,6 +17,7 @@
 
 2) treat CSV with data_treatment file ----> LUNCH data.py (it take long time...)
 
+3) Install your environement
 
 
 # REQUIREMENTS
