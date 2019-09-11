@@ -41,3 +41,12 @@ download psycopg2 here:
 <em>(You can implement it on different database)</em>
 
 
+
+
+
+
+
+
+
+
+<em>Repeat and repeat is the key</em>
