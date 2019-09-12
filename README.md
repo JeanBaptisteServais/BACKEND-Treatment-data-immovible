@@ -46,7 +46,7 @@ download psycopg2 here:
 
 # Our data:
 
-This is French data. Our data is limited because it's a personal project with a restricted database (100 000 rows)
+This is French data. Our data is limited because it's a personal project with a restricted database (10 000 rows)
 
 We can (maybe) found a departement for this postal code:
 
