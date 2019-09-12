@@ -1,4 +1,4 @@
-# immovable-DJANGO-web-site in building
+# immovable-DJANGO-web-site in pep8 / refactoring
 
 ![immo](https://user-images.githubusercontent.com/54853371/64719972-ab5ca000-d4c9-11e9-85ae-76a6d6fa757d.png)
 
@@ -6,9 +6,7 @@ avaible on
 
 # WHAT IS IT ?
 
-
-
-
+by the government data on the price of properties we have made a page that gives the average price of houses by their room as well as their square meter and apartments on a department! We also display a google map to located the user.
 
 
 
@@ -16,11 +14,12 @@ avaible on
 
 # STEP:
 
-1) download csv
+1) treat CSV with data_treatment file ----> LUNCH data.py (it take long time...)
 
-2) treat CSV with data_treatment file ----> LUNCH data.py (it take long time...)
+2) put in on a web serveur
 
-3) Install your environement
+3) create a django environement
+
 
 
 # REQUIREMENTS
