@@ -18,7 +18,7 @@ We trying to inform with small summary the main concepts of real estate
 
 # STEP:
 
-1) treat CSV with data_treatment file ----> LUNCH data.py (it take long time and more than 10 000 rows in database...)
+1) treat CSV with data_treatment.py file ----> LUNCH data.py (it take long time and more than 10 000 rows in database...)
 
 2) put in on a web serveur
 
