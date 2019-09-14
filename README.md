@@ -10,6 +10,8 @@ ALERT there aren't all folder, you can't clone it.
 
 by the data give by the governement <a href=https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/> <em>here</em></a> on the price of properties we have made a page that gives the average price of houses by their room as well as their square meter and apartments on a department! We also display a google map to located the user.
 
+We trying to inform with small summary the main concepts of real immovable
+
 
 
 
