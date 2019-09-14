@@ -1,0 +1,953 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Immobilier</title>
+
+        <! -- Importing CDN Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <! -- FIRST Section -->
+        <section id="masthead">
+            <div id="div_title">
+            
+                <h1 id="" style="font-size:6em;margin-top:-30px;">La recherche<h1>
+                <h1 id="" style="font-size:7em;">
+                  immobiliaire 
+                  <p style="width:10px;height:10px;background:black;display:inline-block;vertical-align: bottom;">
+                  </p>
+                </h1>                
+                
+            </div>
+
+            <center>
+            
+              <h3 id="" style="margin-top:30px;font-family:segoe print;color:black;font-weight:bold;font-size:2em;">
+                Notre métier, notre passion n'attendez plus, faites-nous confiance<br><br>
+              </h3>
+            </center>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          <section id="" style="margin-top:50px;">
+
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <img src="/static/picture/home/1.jpg" id="" style="width:100%;">
+                    </div>
+                    <div class="col-sm" id="" style="font-size:2em;margin-top:20px;">
+                      Une recherche immobiliaire peut............
+                    </div>
+                  </div>
+              </div>
+          </section>
+              
+
+
+
+          <section id="information" style="margin-top:100px;">
+              <center>
+                <h1>N O S  &nbsp;&nbsp;&nbsp; I N F O R M A T I O N S </h1> comme synrego
+
+                <div id="introduction">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm">
+
+                          <img src="/static/picture/home/2.jpg" id="" style="width:300px;"><br><br><br>
+
+                          
+                          Qu'est qu'une valeur ......<br>
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+
+
+        
+                        </div>
+                        <div class="col-sm">
+                          Pourquoi utiliser <br>
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+                        </div>
+                      </div>
+                    </div>
+              </center>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <center>
+            <! -- SECOND Section -->
+            <section id="recherche">
+                <! -- MAP DIV -->
+                <h1>Trouvez ce qui vous convient le mieux</h1>
+                <div class="col-sm" id="" style="margin-top:20px;">
+                    <div id="div_map"></div>
+                    <div id="map"></div>
+                </div>
+
+                <! -- RESULT DIV -->
+                <div>
+                    <! -- SEARCHING INPUT DIV -->
+                    <div id="div_search">
+                          <! -- TYPE OF INFRA -->
+                          <div class="row" id="infra">
+                              <div class="col-sm">
+                                  <img src="/static/picture/home/house.png" id="house"><br>
+                                  <input type="button" value="Maison" onclick="type_infra('maison')" class="input_infra">
+                              </div>
+                              <div class="col-sm">
+                                  <img src="/static/picture/home/appart.png" id="appart"><br>
+                                  <input type="button" value="Appartement" onclick="type_infra('appartement')" class="input_infra">
+                              </div>
+                          </div>
+
+                          <input type="text" placeholder="Votre recherche de commune..." id="entrance_address"><br>
+                          <button type="button" class="btn btn-primary" id="button_valid_search">Valider</button>
+
+                          <! -- LOADING DIV -->
+                          <div id="loading">
+                              <div><img src="/static/picture/home/loading.gif" id="loading_gif"></div>
+                              <div id="text_chargement"><em>C h a r g e m e n t</em></div>
+                          </div>
+
+                          <! -- TEXT RESULT -->
+                          <div id="text_search">
+                              <h2 id="dress"></h2>
+                              <div class="row" id="result_search">
+                                  <div class="col-sm">
+                                      <p><img src="/static/picture/home/appart.png" id="appart"></p>
+                                      <p id="appartement_prix"></p>
+                                      <p id="piece_appart"></p>
+                                      <p id="area_appart"></p>
+                                  </div>
+                                  <div class="col-sm">
+                                      <p> <img src="/static/picture/home/house.png" id="house"></p>
+                                      <p id="maison_prix"></p>
+                                      <p id="piece_maison"></p>
+                                      <p id="area_maison"></p>
+                                  </div>
+                              </div>
+
+                              <div id="nos_data"></div>
+
+                              <! -- SEARCHING INPUT DIV -->
+                              <div id="div_search2">
+                                  <input type="text" placeholder="Votre recherche..." id="entrance_address2">
+                                  <button type="button" class="btn btn-primary" id="button_valid_search2">Valider</button>
+                              </div>
+                  </div>
+                </div>
+              </div>
+            </center>
+
+
+          </section>
+
+
+          <section>
+            <div id="" style="margin-top:200px;">
+
+            
+              <img src="/static/picture/home/3.jpg" id="" style="width:300px;">
+              <img src="/static/picture/home/4.jpg" id="" style="width:300px;">
+              <img src="/static/picture/home/5.jpg" id="" style="width:300px;">
+
+            </div>
+
+          </section>
+
+          
+   
+    </body>
+
+   
+
+
+
+
+    <! -- Importing CDN Jquerry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <! -- Importing GOOGLE MAP API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqJf5bBiufgiWCK34KcdmPt4Zhsp4oRCc&callback=initMap"
+        async defer></script>
+</html>
+
+
+<style>
+
+    /* --------------------------------------------TAG */
+    body{
+        text-align:center;
+    }
+    h2{
+        margin-top:20px;
+        font-size:1.5em;
+    }
+    ::-webkit-input-placeholder {
+       font-style: italic;
+    }
+
+
+ /* -----------------------------------------------MASTHEAD */
+ #masthead{
+     min-height:50rem;
+     position:relative;
+     display:table;
+     width:100%;
+     height:auto;
+     padding-top:8rem;
+     padding-bottom:8rem;
+     background:-webkit-gradient(
+         linear,left top,
+         right top,
+         from(rgba(255,255,255,.1)),
+         to(rgba(255,255,255,.1))),
+         url(/static/home/home.jpg);
+         background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),
+         url(/static/home/home.jpg);background-position:center center;
+         background-repeat:no-repeat;
+         background-size:cover
+     }
+     .masthead h1{
+         font-size:4rem;margin:0;padding:0
+      }
+      @media (min-width:992px){
+          .masthead{height:100vh
+      }
+      .masthead h1{
+          font-size:5.5rem
+      }
+  }
+
+
+
+  /* -------------------------------------------------------DESIGN */
+
+  #introduction{
+    font-size:1.2em;
+    margin-top:2.5em;
+    width: 100%;
+  }
+  #picture_intro{
+    width:60%;
+    margin-top:20px;
+  }
+
+
+  /* -------------------------------------------------------DIV MAP */
+  #div_map{
+    height:400px;
+    width:60%;
+    background:url("/static/picture/home/pic.jpg")
+  }
+  #map{
+    height:400px;
+    display:none;
+  }
+
+ /* ---------------------------------------------------DIV RESEARCH */
+
+ #div_title{
+    margin-top:0px;
+  }
+ #recherche{
+    height:600px;
+    margin-top:100px;
+  }
+  #div_search{
+    margin-top:5em;
+    height:400px;
+    width:60%;
+  }
+  #entrance_address{
+    margin-top:50px;
+    width:70%;
+    text-align:center;
+    height:7%;
+    font-size:1.5em;
+  }
+  #logo_span{
+    font-size:0.9em;
+  }
+  #button_valid_search{
+    font-size:1.4em;
+    margin-top:3.5%;
+  }
+  #house{
+    width:30px;
+    height:auto;
+  }
+  #appart{
+    width:30px;
+    height:auto;
+  }
+  .input_infra{
+    background:none;
+    border:none;
+    height:30px;
+    font-weight:bold;
+    font-size:1.6em;
+    margin-top:1em;
+  }
+  .input_infra:hover{
+    background:none;
+    border:1px solid black;;
+  }
+
+  /* ----------------------------------------DIV LOADING RESEARCH */
+  #loading{
+    width:100%
+    height:auto;
+    display:none;
+  }
+  #loading_gif{
+    width:30%;
+    height:auto;
+    margin:0;
+  }
+  #text_chargement{
+    margin-top:-30px;
+  }
+
+  /* DIV RESEARCH 2 */
+  #text_search{
+    margin-top:4em;
+    width:100%;
+    height:auto;
+    display:none;
+  }
+  #div_search2{
+    margin-top:5em;
+  }
+                 
+</style>
+
+
+
+<script>
+
+
+      //<div>Icons made by <a href="https://www.flaticon.com/authors/nhor-phai" title="Nhor Phai">Nhor Phai</a> from <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a></div>
+      //<div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+      
+
+    //***************************GLOBAL VAR*****************************************
+    var varTypeInfra = "";
+    treatData = [];
+    lattitude_data = 0;
+    longitude_data = 0;
+
+    len_maison = 0
+    maison = 0
+    len_appartement = 0
+    appartement = 0
+
+    len_room_house = 0
+    room_house = 0
+
+    len_room_appart = 0
+    room_apart = 0
+
+    len_area_house = 0
+    area_house = 0
+    len_area_appart = 0
+    area_appart = 0
+
+    k_maison = false
+    k_appart = false
+
+    addresse_name = ""
+
+    var_w = 0
+    counter = 0
+
+
+    //RE INITIALIZATION OF GLOBAL
+    function empty_global(){
+      len_maison = 0
+      maison = 0
+      len_appartement = 0
+      appartement = 0
+
+      len_room_house = 0
+      room_house = 0
+
+      len_room_appart = 0
+      room_apart = 0
+
+      len_area_house = 0
+      area_house = 0
+      len_area_appart = 0
+      area_appart = 0
+
+      k_maison = false
+      k_appart = false
+
+      addresse_name = ""
+
+      var_w = 0
+      counter = 0
+
+    };
+
+
+    //***************************USER PRESSED BUTTON********************************
+    //WE RECUP IF USER SEARCH HOUSE OR APPARTEMENT
+    function type_infra(type){
+        varTypeInfra = type;
+    };
+
+
+    //WE RECUP DATA INFRA FROM INPUT
+    function recup_data(div_name){
+        var recuperation = document.getElementById(div_name).value;
+        return recuperation;
+    };
+
+
+    //*************************DURING AJAX CALL**************************************
+    //UNDISPLAY FUNCTION
+    function undisplay(div){
+      document.getElementById(div).style.display = "none";
+    };
+
+    //DISPLAY FUNCTION
+    function display(div){
+      document.getElementById(div).style.display = "block";
+    };
+
+    //FIRST PART OF AJAX
+    function first_part_AJAX_ONE(){
+      var recup = recup_data("entrance_address"); // Recup value from input
+
+      display("loading") // displaying loading logo
+      undisplay("infra")//display infra inputs
+      undisplay("entrance_address")//undisplay inputs search
+      undisplay("button_valid_search")//undisplay button search
+
+      return recup
+    };
+
+
+    //*********************************AJAX FUNCTIONS********************************
+    //AJAX CALL FOR MAP
+    $("#button_valid_search").on("click", function(e){
+
+      recup = first_part_AJAX_ONE()
+
+      $.ajax({
+        data:{
+          'infra':varTypeInfra,
+          'data':recup,
+          csrfmiddlewaretoken:'{{csrf_token}}'
+        },
+          type:"POST",
+      })
+      .done(function(data){
+          if (data.error){
+              {}
+          }
+          else{
+              verification = no_data(data);
+              if(verification == true){
+                no_data2()
+              }
+              else{
+                end_of_first_ajax_call(data);
+            };
+          };
+      });
+    });
+
+
+
+
+    //*************************END AJAX CALL*******************************************
+
+                              //****NO DATA*****
+
+    function no_data(data){
+        if(data == "Oups nous n'avons pas donnée voir nos données ?"){
+            return true
+        }
+        else{
+            return false
+        }
+    };
+
+    function no_data2(){
+        undisplay("loading");
+        var text = "oops nous n'avons rien la dessus <input type='button' value='Voir nos data' id='see_data'>";
+        document.getElementById("nos_data").innerHTML = text;
+        display("text_search"); // displaying text of result
+        display("div_search2");
+    };
+
+
+
+                          //*****DATA*****
+
+
+    //MAP INITIALISATION
+    function initMap(lattitude_data, longitude_data){
+        var options = {
+            zoom:15,
+            center:{lat:lattitude_data, lng:longitude_data}
+        }
+        var map = new google.maps.Map(document.getElementById("map"), options);
+    };
+
+
+
+    //END FIRST CALL AJAX
+    function end_of_first_ajax_call(data){
+        display("loading") // displaying loading logo
+
+        undisplay("loading")//display infra inputs
+        undisplay("div_map")//elete picture
+        
+        undisplay("entrance_address")//Start input
+        undisplay("button_valid_search")//Start button
+        
+        display("map") // displaying map
+        display("text_search") // displaying text of result
+
+        treatment_data_http(data)// treat data from ajax return
+        recup_data_ajax()// recup lat and long data for google map
+        initMap(lattitude_data, longitude_data); // put google map
+
+    };
+
+
+
+    //**************************************TREATMENT DATA FROM VIEWS.PY**********************************
+
+    //WE ENTRANCE DATA FROM SQL INTO AN ARRAY ------------------------------------------> STEP 1
+    function treatment_data_http(data){
+
+        var increment = ""
+        var list = []
+        for(var i = 0; i < data.length + 1; i++){
+            if(data[i] == "[" || data[i] == "]" || data[i]  == "'"){
+                {}
+            }else if(data[i] == ","){
+                list.push(increment)
+                increment = ""
+                counter = 0
+            }else{
+                increment += data[i]
+            }
+        }
+        treatData.push(list);
+    };
+
+
+    //PART 1 search lattitude and longitude ------------------------------------------> STEP 2.1
+    function recup_lat_and_long(counter, treatData){
+
+        if(counter == 8){
+            lattitude_data = parseFloat(treatData)
+        }
+        if(counter == 9){
+            longitude_data = parseFloat(treatData)
+        }
+    };
+
+
+    //PART 2 search price immovable ----------------------------------------------------> STEP2 2.2
+    function recup_price_immovable(counter, treatData){
+      
+      if(counter == 0){
+          var_w += parseInt(treatData)
+      }
+      if(counter == 1 && treatData == " Maison"){
+          maison += var_w
+          len_maison += 1
+          var_w = 0
+          k_maison = true
+      }else if(counter == 1 && treatData == " Appartement"){
+          appartement += var_w
+          len_appartement += 1
+          var_w = 0
+          k_appart = true
+      }
+    };
+
+
+
+    //PART 3 search area number of room  ----------------------------------------------------> STEP2 2.3
+    function number_room(counter, treatData){
+      if(counter == 2){
+          if(k_appart == true){
+              len_room_appart += 1
+              room_apart += parseInt(treatData)
+          }else if(k_maison == true){
+              len_room_house += 1
+              room_house += parseInt(treatData)
+          }
+      }
+      if(counter == 2){
+          if(k_appart == true){
+              len_room_appart += 1
+              room_apart += parseInt(treatData)
+          }else if(k_maison == true){
+              len_room_house += 1
+              room_house += parseInt(treatData)
+          }
+       }
+
+    };
+
+
+    //PART 4 search area immovable  -----------------------------------------------------------> STEP2 2.4
+    function area_immovable(counter, treatData){
+      if(counter == 3){
+          if(k_appart == true){
+              len_area_appart += 1
+              area_appart += parseInt(treatData)
+              k_appart = false
+          }else if(k_maison == true){
+              len_area_house += 1
+              area_house += parseInt(treatData)
+              k_maison = false
+          }
+       }
+    };
+
+
+    //PART 5 search addresse ----------------------------------------------------------------------> STEP2 2.5
+    function addresse_name_situation(counter, treatData){
+        if(counter == 7){
+          addresse_name = treatData
+      }
+    };
+
+
+    //WE DISPLAY THE RESULT WE GET -----------------------------------------------------------------> STEP2 2.6
+    function display_result_under_logo_house(appartement, len_appartement, maison, len_maison,
+                            room_apart, len_room_appart, room_house, len_room_house,
+                            area_appart, len_area_appart, area_house, len_area_house,
+                            addresse_name){
+
+        //Now we displaying it !!
+        var appart_price = Math.round(appartement/len_appartement) + " euros en moyenne";
+        var house_price = Math.round(maison/len_maison) + " euros en moyenne";
+        var piece_house = Math.round(room_apart/len_room_appart) + " pièce en moyenne";
+        var piece_aprt = Math.round(room_house/len_room_house) + " pièce en moyenne";
+        var area_aprt = Math.round(area_appart/len_area_appart) + " mètre carré en moyenne";
+        var area_houise = Math.round(area_house/len_area_house) + " mètre carré en moyenne";
+
+        document.getElementById("appartement_prix").innerHTML = appart_price;
+        document.getElementById("maison_prix").innerHTML = house_price;
+
+        document.getElementById("piece_appart").innerHTML = piece_house;
+        document.getElementById("piece_maison").innerHTML = piece_aprt
+
+        document.getElementById("area_appart").innerHTML = area_aprt;
+        document.getElementById("area_maison").innerHTML = area_houise;
+        document.getElementById("dress").innerHTML = addresse_name;
+    };
+
+
+
+    //RECUP DATA FROM treatData TREATED -----------------------------------------------------------> STEP 3 
+    function recup_data_ajax(){
+
+        for(var i = 0; i < treatData.length; i++){
+            for(var j = 0; j < treatData[i].length; j++){
+
+                //part of lattitude and longitude where COUNT = 0
+                recup_lat_and_long(counter, treatData[i][j])
+
+                //part of price where COUNT = 1
+                recup_price_immovable(counter, treatData[i][j])
+
+                //part of number of room where COUNT = 2
+                number_room(counter, treatData[i][j])
+
+                //part of room where COUNT = 3
+                area_immovable(counter, treatData[i][j])
+
+                //part of addresse name where COUNT = 7
+                addresse_name_situation(counter, treatData[i][j])
+
+              
+                //We empty to -1 the counter where COUNTER = 9
+                if(counter == 9){
+                    counter = -1
+                }
+                counter += 1
+            }
+        }
+
+        //Now we displaying it !!
+        display_result_under_logo_house(appartement, len_appartement, maison, len_maison,
+                                        room_apart, len_room_appart, room_house, len_room_house,
+                                        area_appart, len_area_appart, area_house, len_area_house,
+                                        addresse_name);
+    };
+
+
+
+
+
+    //*************************DURING SECOND AJAX CALL***********************************
+
+
+    //UNINDISPLAY LAST RESULT
+    function unindisplay_last_result(){
+        document.getElementById("appartement_prix").innerHTML = "";
+        document.getElementById("maison_prix").innerHTML = "";
+        document.getElementById("piece_appart").innerHTML = "";
+        document.getElementById("piece_maison").innerHTML = ""
+        document.getElementById("area_appart").innerHTML = "";
+        document.getElementById("area_maison").innerHTML = "";
+        document.getElementById("dress").innerHTML = "";
+    };
+
+
+    //FIRST PART SECOND AJAX CALL
+    function first_part_AJAX_TWO(){
+      
+      treatData = [] //Raise the array who contains data
+      var recup = recup_data("entrance_address2"); // Recup value from input
+    
+      undisplay("text_search"); 
+      undisplay("div_search2");//undisplay input and button of second search
+      undisplay("map"); // displaying loading logo
+
+      unindisplay_last_result();
+      empty_global();
+
+      display("loading"); // displaying loading logo
+      display("div_map")
+
+      
+      document.getElementById("nos_data").innerHTML = ""
+
+      return recup
+    };
+
+
+
+
+    //*************************SECOND CALL AJAX***********************************
+    //AJAX CALL THE SECOND INPUT
+    $("#button_valid_search2").on("click", function(e){
+
+      recup = first_part_AJAX_TWO()
+
+      $.ajax({
+        data:{
+          'infra':varTypeInfra,
+          'data':recup,
+          csrfmiddlewaretoken:'{{csrf_token}}'
+        },
+          type:"POST",
+      })
+      .done(function(data){
+          if (data.error){
+              {}
+          }
+          else{
+              verification = no_data(data);
+              if(verification == true){
+                no_data2()
+              }
+              else{
+                end_of_SECOND_AJAX_CALL_END(data);
+            };
+          };
+      });
+    });
+
+
+
+
+    //*******************************END SECOND AJAX CALL***********************************
+
+    function end_of_SECOND_AJAX_CALL_END(data){
+        undisplay("loading"); // displaying loading logo
+        undisplay("div_map");//undisplay input and button of second search
+
+        display("map");//undisplay input and button of second search
+        display("text_search"); // displaying text of result
+        display("div_search2");
+
+        treatment_data_http(data)// treat data from ajax return
+        recup_data_ajax()// recup lat and long data for google map
+        initMap(lattitude_data, longitude_data); // put google map
+    }
+
+
+
+
+    //****************************NO DATA AJAX CALL***********************************
+
+    $("#button_valid_search2").on("click", function(e){
+
+      recup = first_part_AJAX_TWO()
+
+      $.ajax({
+        data:{
+          'infra':varTypeInfra,
+          'data':recup,
+          csrfmiddlewaretoken:'{{csrf_token}}'
+        },
+          type:"POST",
+      })
+      .done(function(data){
+          if (data.error){
+              {}
+          }
+          else{
+              verification = no_data(data);
+              if(verification == true){
+                no_data2()
+              }
+              else{
+                  end_of_SECOND_AJAX_CALL_END(data);
+            };
+          };
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //******************AJAX PROTECTION**********************************************
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
