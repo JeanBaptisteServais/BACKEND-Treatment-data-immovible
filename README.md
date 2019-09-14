@@ -1,4 +1,4 @@
-# immovable-DJANGO-web-site in pep8 / refactoring
+# immovable-DJANGO-web-site design in progress
 
 ![immo](https://user-images.githubusercontent.com/54853371/64719972-ab5ca000-d4c9-11e9-85ae-76a6d6fa757d.png)
 
