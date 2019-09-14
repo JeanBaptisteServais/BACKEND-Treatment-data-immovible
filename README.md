@@ -56,7 +56,15 @@ We can (maybe) found a departement for this postal code:
 
 </details>
 
+# Architecture
 
+class diagramm in cours
+
+sql class in cours
+
+# UML
+
+actor, functionality in cours
 
 
 
