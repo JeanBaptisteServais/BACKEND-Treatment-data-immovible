@@ -1,1 +1,216 @@
-in course
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Immobilier</title>
+
+        <! -- Importing CDN Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        
+        <link href="{% static "css/bootstrap/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/home.css" %}" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <! -- FIRST Section -->
+        <section id="masthead">
+            <div id="div_title">
+                <h1 id="h11">La recherche<h1>
+                <h1 id="h12">
+                  immobiliaire 
+                  <p id="carre_titre">
+                  </p>
+                </h1>                  
+            </div>
+
+            <center>
+              <h3 id="h3">
+                Notre métier, notre passion n'attendez plus, faites-nous confiance<br><br>
+              </h3>
+            </center>
+
+        </section>
+
+
+          <section id="immovable_presentation">
+
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <img src="{% static "picture/home/1.jpg" %}" id="image_immovable_presentation">
+                    </div>
+                    <div class="col-sm" id="immovable_presentation_text">
+                      Une recherche immobiliaire peut vous faire gagner du temps et de l'argent.<br>
+                      Un agent immobilier est une personne qualifiée dans le domaine de la vente de bien
+                      immobilier.<br>
+                      Un agent immobilier peut faire grimper votre vente ainsi que de baisser un achat.
+                      Par des conseils sur la décoration mais aussi sur la rénovation.<br><br>
+                      N'attendez pas, Prenez rendez-vous.
+                    </div>
+                  </div>
+              </div>
+          </section>
+              
+
+          <section id="information">
+              <center>
+                <h1>N O S  &nbsp;&nbsp;&nbsp; I N F O R M A T I O N S </h1>
+
+                <div id="introduction">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm">
+
+                          <img src="{% static "picture/home/2.jpg" %}"
+                          id="picture_info"><br><br><br>
+
+                          <p id="text_info2">
+                              Qu'est qu'une valeur ......<br>
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+                          </p>
+
+
+                    </div>
+                    <div class="col-sm">
+                        <p id="text_info3">
+                              Pourquoi utiliser <br>
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        </p>
+
+                    </div>
+                  </div>
+                </div>
+              </center>
+          </section>
+
+
+          <center>
+            <! -- SECOND Section -->
+            <section id="recherche">
+                <! -- MAP DIV -->
+                <h1>Trouvez ce qui vous convient le mieux</h1>
+                <div class="col-sm" id="container_div_maps">
+                    <div id="div_map"></div>
+                    <div id="map"></div>
+                </div>
+
+                <! -- RESULT DIV -->
+                <div>
+                    <! -- SEARCHING INPUT DIV -->
+                    <div id="div_search">
+                          <! -- TYPE OF INFRA -->
+                          <div class="row" id="infra">
+                              <div class="col-sm">
+                                  <img src="{% static "picture/home/house.png" %}" id="house"><br>
+                                  <input type="button" value="Maison" onclick="type_infra('maison')" class="input_infra">
+                              </div>
+                              <div class="col-sm">
+                                  <img src="{% static "picture/home/appart.png" %}" id="appart"><br>
+                                  <input type="button" value="Appartement" onclick="type_infra('appartement')" class="input_infra">
+                              </div>
+                          </div>
+
+                          <input type="text" placeholder="Votre recherche de commune..." id="entrance_address"><br>
+                          <button type="button" class="btn btn-primary" id="button_valid_search">Valider</button>
+
+                          <! -- LOADING DIV -->
+                          <div id="loading">
+                              <div><img src="{% static "picture/home/loading.gif" %}" id="loading_gif"></div>
+                              <div id="text_chargement"><em>C h a r g e m e n t</em></div>
+                          </div>
+
+                          <! -- TEXT RESULT -->
+                          <div id="text_search">
+                              <h2 id="dress"></h2>
+                              <div class="row" id="result_search">
+                                  <div class="col-sm">
+                                      <p><img src="{% static "picture/home/appart.png" %}" id="appart"></p>
+                                      <p id="appartement_prix"></p>
+                                      <p id="piece_appart"></p>
+                                      <p id="area_appart"></p>
+                                  </div>
+                                  <div class="col-sm">
+                                      <p> <img src="{% static "picture/home/house.png" %}" id="house"></p>
+                                      <p id="maison_prix"></p>
+                                      <p id="piece_maison"></p>
+                                      <p id="area_maison"></p>
+                                  </div>
+                              </div>
+
+                              <div id="nos_data"></div>
+
+                              <! -- SEARCHING INPUT DIV -->
+                              <div id="div_search2">
+                                  <input type="text" placeholder="Votre recherche..." id="entrance_address2">
+                                  <button type="button" class="btn btn-primary" id="button_valid_search2">Valider</button>
+                              </div>
+                  </div>
+                </div>
+              </div>
+            </center>
+          </section>
+
+
+          <section>
+            <div id="picturess" style="margin-top:200px;">
+
+            
+              <img src="{% static "picture/home/3.jpg" %}" id="" style="width:300px;">
+              <img src="{% static "picture/home/4.jpg" %}" id="" style="width:300px;">
+              <img src="{% static "picture/home/5.jpg" %}" id="" style="width:300px;">
+              <br><br>
+              <div>Icons made by <a href="https://www.flaticon.com/authors/nhor-phai" title="Nhor Phai">Nhor Phai</a> from <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a></div>
+              <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+      
+            </div>
+
+          </section>
+
+
+    </body>
+
+   
+
+    <! -- Importing CDN Jquerry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <! -- Importing GOOGLE MAP API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqJf5bBiufgiWCK34KcdmPt4Zhsp4oRCc&callback=initMap"
+        async defer></script>
+    <! -- Our js FILE -->
+    <script src="{% static "js/home.js" %}"></script>
+        
+</html>
