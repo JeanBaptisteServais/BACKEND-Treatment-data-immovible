@@ -1,0 +1,198 @@
+
+/* --------------------------------------------TAG */
+body{
+    text-align:center;
+}
+h2{
+    margin-top:20px;
+    font-size:1.5em;
+}
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+
+/* -----------------------------------------------MASTHEAD */
+#masthead{
+ min-height:50rem;
+ position:relative;
+ display:table;
+ width:100%;
+ height:auto;
+ padding-top:8rem;
+ padding-bottom:8rem;
+ background:-webkit-gradient(
+     linear,left top,
+     right top,
+     from(rgba(255,255,255,.1)),
+     to(rgba(255,255,255,.1))),
+     url(/static/home/home.jpg);
+     background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),
+     url(/static/home/home.jpg);background-position:center center;
+     background-repeat:no-repeat;
+     background-size:cover
+ }
+ .masthead h1{
+     font-size:4rem;margin:0;padding:0
+  }
+  @media (min-width:992px){
+      .masthead{height:100vh
+  }
+  .masthead h1{
+      font-size:5.5rem
+  }
+}
+
+
+
+/* -------------------------------------------------------DESIGN */
+
+#introduction{
+font-size:1.2em;
+margin-top:2.5em;
+width: 100%;
+}
+#picture_intro{
+width:60%;
+margin-top:20px;
+}
+#h11{
+font-size:6em;
+margin-top:-30px;
+}
+#h12{
+font-size:7em;
+}
+#carre_titre{
+width:10px;
+height:10px;
+background:black;
+display:inline-block;
+vertical-align: bottom;
+}
+#h3{
+margin-top:30px;
+font-family:segoe print;
+color:black;
+font-weight:bold;
+font-size:2em;
+}
+#immovable_presentation{
+margin-top:50px;
+visibility:hidden;
+height:300px;
+}
+#image_immovable_presentation{
+width:100%;
+}
+#information{
+margin-top:200px;
+visibility:hidden;
+}
+#picture_info{
+width:300px;
+visibility:hidden;
+}
+#immovable_presentation_text{
+font-size:2em;
+text-align:justify;
+}
+#text_info2{
+visibility:hidden;
+}
+#text_info3{
+visibility:hidden;
+}
+#container_div_maps{
+margin-top:20px;
+}
+
+
+
+
+/* -------------------------------------------------------DIV MAP */
+#div_map{
+height:400px;
+width:60%;
+background:url("/static/picture/home/pic.jpg")
+}
+#map{
+height:400px;
+display:none;
+}
+
+/* ---------------------------------------------------DIV RESEARCH */
+
+#div_title{
+margin-top:0px;
+}
+#recherche{
+height:600px;
+margin-top:100px;
+visibility:hidden;
+}
+#div_search{
+margin-top:5em;
+height:400px;
+width:60%;
+}
+#entrance_address{
+margin-top:50px;
+width:70%;
+text-align:center;
+height:7%;
+font-size:1.5em;
+}
+#logo_span{
+font-size:0.9em;
+}
+#button_valid_search{
+font-size:1.4em;
+margin-top:3.5%;
+}
+#house{
+width:30px;
+height:auto;
+}
+#appart{
+width:30px;
+height:auto;
+}
+.input_infra{
+background:none;
+border:none;
+height:30px;
+font-weight:bold;
+font-size:1.6em;
+margin-top:1em;
+}
+.input_infra:hover{
+background:none;
+border:1px solid black;;
+}
+
+/* ----------------------------------------DIV LOADING RESEARCH */
+#loading{
+width:100%
+height:auto;
+display:none;
+}
+#loading_gif{
+width:30%;
+height:auto;
+margin:0;
+}
+#text_chargement{
+margin-top:-30px;
+}
+
+/* DIV RESEARCH 2 */
+#text_search{
+margin-top:4em;
+width:100%;
+height:auto;
+display:none;
+}
+#div_search2{
+margin-top:5em;
+}
