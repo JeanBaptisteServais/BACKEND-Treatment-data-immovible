@@ -2,9 +2,7 @@
 
 ![immo](https://user-images.githubusercontent.com/54853371/64719972-ab5ca000-d4c9-11e9-85ae-76a6d6fa757d.png)
 
-avaible on
 
-ALERT there aren't all folder, you can't clone it.
 
 # WHAT IS IT ?
 
@@ -12,39 +10,6 @@ by the data give by the governement <a href=https://www.data.gouv.fr/fr/datasets
 
 We trying to inform with small summary the main concepts of real estate
 
-
-
-
-
-# STEP:
-
-1) treat CSV with data_treatment.py file ----> LUNCH data.py (it take long time and more than 10 000 rows in database...)
-
-2) put in on a web serveur
-
-3) create a django environement
-
-
-
-# REQUIREMENTS
-
-download python 3.x here:
-
-download django with (python -m pip, pip, pip3)
-
-<em>you have trouble with pip? not recognized as an external order? setup tool.py</em> copy and lunch it on file.py here:
-
-lunch django-admin startproject <YOUR PROJECT>
-
-Documentation Django here :
-
-download csv here:
-
-download gzip here: 
-
-download psycopg2 here: 
-
-<em>(You can implement it on different database)</em>
 
 
 # Our data:
