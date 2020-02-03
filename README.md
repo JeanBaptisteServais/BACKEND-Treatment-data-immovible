@@ -1,4 +1,3 @@
-# immovable-DJANGO-web-site design in progress
 
 ![immo](https://user-images.githubusercontent.com/54853371/64719972-ab5ca000-d4c9-11e9-85ae-76a6d6fa757d.png)
 
@@ -24,16 +23,6 @@ We can (maybe) found a departement for this postal code:
 
 
 </details>
-
-# Architecture
-
-class diagramm in cours
-
-sql class in cours
-
-# UML
-
-actor, functionality in cours
 
 
 
